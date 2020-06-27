@@ -3,4 +3,12 @@
     <string name="hint_id">Please enter id number</string>
     <string name="submit">Submit</string>
     <string name="textview">TextView</string>
+    <string name="dob">Date of birth :</string>
+    <string name="gender">Gender :</string>
+    <string name="nationality">Nationality :</string>
+    <string name="newline">\n</string>
+    <string name="Female">Female</string>
+    <string name="Male">Male</string>
+    <string name="SAcitizen">SA citizen</string>
+    <string name="permaent">Permanent citizen</string>
 </resources>

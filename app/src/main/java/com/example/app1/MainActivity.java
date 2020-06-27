@@ -25,7 +25,22 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String idNumber = edID.getText().toString().trim();
+                String idNumber = edID.getText().toString().trim(); //trim avoid spaces from the begining and end
+                String dob = idNumber.substring(0,6); // substring exclude the last char
+                String sGender;
+                int gender = Integer.parseInt(Character.toString(idNumber.charAt(6)));
+                if (gender<5)
+                    sGender=getString(R.string.Female);
+                else
+                    sGender=getString(R.string.Male);
+                int nationality = Integer.parseInt(Character.toString(idNumber.charAt(10)));
+                String sNationality;
+                if(nationality==0)
+                    sNationality=getString(R.string.SAcitizen);
+                else
+                    sNationality=getString(R.string.permaent);
+                String text=getString(R.string.dob)+dob+ getString(R.string.newline) +getString(R.string.gender)+sGender+getString(R.string.newline) +getString(R.string.nationality)+sNationality;
+                tvResults.setText(text);
             }
         });
     }
